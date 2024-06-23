@@ -18,7 +18,7 @@ const Home = () => {
   const fetchTransactionsByAddress = async () => {
     try {
       if (!toAddress) {
-        throw new Error('Copy wallet address and paste in box.');
+        throw new Error('Voyager do not provide token transfers/balances endpoints yet.');
       }
 
       const response = await axios.get(`https://sepolia-api.voyager.online/beta/txns`, {
@@ -80,7 +80,7 @@ const Home = () => {
       {error && <p className="error">{error}</p>}
       {txnData && (
         <div className="dataContainer">
-          <h2>Transaction Data:</h2>
+          <h2>Transactions:</h2>
           {Array.isArray(txnData.items) && txnData.items.map((item, index) => (
             <div key={index}>
               <p>
