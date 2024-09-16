@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   const { txnHash, to } = req.query;
   console.log(txnHash);
   console.log(to);
-  const apiKey = 'fNqNAyThtG6kZStO3WdH5RLANALQBpK7hkg570l3'; // Replace with your actual API key
+  const apiKey = 'process.env.Api_Key'; // Replace with your actual API key
 
   try {
     let response;
